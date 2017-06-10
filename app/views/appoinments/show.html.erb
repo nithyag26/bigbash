@@ -1,0 +1,98 @@
+<body class="nav-md">
+<div class="container body">
+
+<% flash.each do |key, value| %>
+      <div align="center" id="flash" class="alert alert-<%= key %>"><%= value %></div>
+  <% end %>
+<% if current_admin %> 
+
+<%= render "partials/topnav" %>
+
+<% else %>
+  
+  <%= render "emp_partials/topnav" %>
+
+
+<% end %>
+
+
+<!-- page content -->
+<div class="right_col" role="main">
+  <div class="">
+    <div class="page-title">
+      <div class="title_left">
+        <h3>Appoinment</h3>
+      </div>
+
+      <div class="title_right">
+        <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+          <div class="input-group">
+            
+                    
+                            
+                        
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+
+    <div class="row">
+
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel" style="height:600px;">
+          <div class="x_title">
+
+
+
+
+
+                <table class="table table-striped">
+
+                <tr>
+
+                <th> Customer Name </th>
+
+
+                <th> Customer Email </th>
+                <th> Appoinment Start Time</th>
+
+                <th> Appoinment End Time</th>
+
+                <th> Action </th>
+                
+
+                </tr>
+
+                <% Appoinment.all.each do |f|%>
+
+                <% if f.start_time > DateTime.now %>
+
+                <tr>
+                <td><%= f.name %></td>
+                <td><%= f.email %></td>
+                <td><%= f.start_time %></td>
+                <td><%= f.end_time %></td>
+
+                <td><%= link_to 'Cancel', appoinment_path(f), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                
+
+                </tr>
+
+                <%end %>
+                <%end %>
+                </table>
+                
+
+                <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /page content -->
+
+
+<%= render "partials/footer" %>
+  <%= javascript_include_tag 'footermanifest', 'data-turbolinks-track' => true %>

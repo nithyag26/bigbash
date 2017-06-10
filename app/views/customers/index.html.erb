@@ -1,0 +1,103 @@
+
+<body class="nav-md">
+<div class="container body">
+  <% flash.each do |key, value| %>
+      <div align="center" id="flash" class="alert alert-<%= key %>"><%= value %></div>
+  <% end %>
+
+<% if current_admin %> 
+
+<%= render "partials/topnav" %>
+
+<% else %>
+  
+  <%= render "emp_partials/topnav" %>
+
+
+<% end %>
+
+
+
+<!-- page content -->
+<div class="right_col" role="main">
+  <div class="">
+    <div class="page-title">
+      <div class="title_left">
+        <h5>Remainder</h5>
+      </div>
+
+      <div class="title_right">
+        <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+          <div class="input-group">
+            
+                    
+                            
+                        
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+
+    <div class="row">
+
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel" style="height:600px;">
+          <div class="x_title">
+
+
+
+
+
+<p id="notice"><%= notice %></p>
+
+<h6>Birthday Remainder </h6> 
+
+<br>
+
+<table class="table table-striped" >
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Mob</th>
+      <th>Email</th>
+      <th>Date of birth</th>
+      <th> Reason </th>
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% Customer.all.each do |customer| %>
+      <tr>
+    
+      <% if customer.date_of_birth.strftime('%d-%m') == Date.today.strftime('%d-%m') %>  
+        
+        <td><%= customer.name %></td>
+        <td><%= customer.mobile %></td>
+        <td><%= customer.email %></td>
+        <td><%= customer.date_of_birth %></td>
+        <td>today is <%= customer.name %>'s birthday</td>
+        <td><%= button_to 'Wish them Happy birthday',{:controller => "customers", :action => "add", :id => customer} %></td>
+      </tr>
+    <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
+
+<div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /page content -->
+
+
+<%= render "partials/footer" %>
+  <%= javascript_include_tag 'footermanifest', 'data-turbolinks-track' => true %>

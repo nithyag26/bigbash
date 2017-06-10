@@ -12,9 +12,12 @@
 //
 //= require jquery
 //= require bootstrap-sprockets
-
+//= require datepicker
 //= require jquery_ujs
 //= require turbolinks
+//= require main
+//= require print
+//= require bills
 
 //= require js/flot/jquery.flot.js
 //= require js/flot/jquery.flot.pie.js
@@ -31,13 +34,11 @@
 //= require js/icheck/icheck.min.js
 
 //= require js/moment/moment.min.js
-//= require js/datepicker/daterangepicker.js
 
 //= require js/chartjs/chart.min.js
 
 //= require js/pace/pace.min.js
 
-//= require  js/nprogress.js
 
 //= require flash.js
 

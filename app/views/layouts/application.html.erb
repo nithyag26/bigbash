@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title><%= content_for?(:title) ? yield(:title) : "GentelellaOnRails" %> </title>
+  <title><%= content_for?(:title) ? yield(:title) : "Aarus Beauty Parlour" %> </title>
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -11,19 +11,10 @@
 
 </head>
 
-<body class="nav-md">
-<div class="container body">
-  <% flash.each do |key, value| %>
-      <div align="center" id="flash" class="alert alert-<%= key %>"><%= value %></div>
-  <% end %>
-
-<%= render "partials/sidenav" %>
-<%= render "partials/topnav" %>
 
 <%= yield %>
 
-  <%= render "partials/footer" %>
-  <%= javascript_include_tag 'footermanifest', 'data-turbolinks-track' => true %>
+  
 
 </body>
 </html>

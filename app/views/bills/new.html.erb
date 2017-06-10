@@ -1,0 +1,90 @@
+<body class="nav-md">
+<div class="container body">
+
+
+<% if current_admin %> 
+
+<%= render "partials/topnav" %>
+
+<% else %>
+  
+  <%= render "emp_partials/topnav" %>
+
+
+<% end %>
+
+
+<!-- page content -->
+<div class="right_col" role="main">
+  <div class="">
+    <div class="page-title">
+      <div class="title_left">
+        <h3>Invoice</h3>
+      </div>
+
+      <div class="title_right">
+        <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+          <div class="input-group">
+            
+                    
+                            
+                        
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+
+    <div class="row">
+
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel" style="height:1000px;">
+          <div class="x_title">
+
+
+
+
+
+                <table class="table table-striped">
+
+                <tr>
+
+                <th> Invoice Number </th>
+
+
+                <th> Invoice Date </th>
+                <th> Customer Name </th>
+
+                <th> Invoice Amount </th>
+
+                
+
+                </tr>
+
+                <% Invoice.all.limit(35).order("id desc").each do |f|%>
+
+                <tr>
+                <td><%= f.id %></td>
+                <td><%= f.invoice_date %></td>
+                <td><%= f.invoice_name %></td>
+                <td><%= f.invoice_amount %></td>
+                
+
+                </tr>
+
+                <%end %>
+                </table>
+                
+
+                <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /page content -->
+
+
+<%= render "partials/footer" %>
+  <%= javascript_include_tag 'footermanifest', 'data-turbolinks-track' => true %>

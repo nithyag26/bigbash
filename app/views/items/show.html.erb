@@ -1,0 +1,87 @@
+<body class="nav-md">
+<div class="container body">
+
+
+<% if current_admin %> 
+
+<%= render "partials/topnav" %>
+
+<% else %>
+  
+  <%= render "emp_partials/topnav" %>
+
+
+<% end %>
+
+<!-- page content -->
+<div class="right_col" role="main">
+  <div class="">
+    <div class="page-title">
+      <div class="title_left">
+        <h5>Service Items</h5>
+      </div>
+
+      <div class="title_right">
+        <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+          <div class="input-group">
+            
+                    
+                            
+                        
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+
+    <div class="row">
+
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel" style="height:600px;">
+          <div class="x_title">
+
+              <h6> Services List </h6>
+
+
+              </br>
+
+
+
+                <table class="table table-striped">
+
+                <tr>
+
+                <th> Service Name </th>
+
+                <th> Service Price </th>
+
+                <th> Action </th>
+
+                </tr>
+
+                <% Item.all.each do |f|%>
+
+                <tr>
+                <td><%= f.service_name %></td>
+                <td><%= f.service_price %></td>
+
+                 <td><%= link_to 'Delete' , item_path(f), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+                </tr>
+
+                <%end %>
+                </table>
+                
+
+                <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /page content -->
+
+
+<%= render "partials/footer" %>
+  <%= javascript_include_tag 'footermanifest', 'data-turbolinks-track' => true %>

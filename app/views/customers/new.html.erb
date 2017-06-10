@@ -1,0 +1,77 @@
+
+<body class="nav-md">
+<div class="container body">
+  <% flash.each do |key, value| %>
+      <div align="center" id="flash" class="alert alert-<%= key %>"><%= value %></div>
+  <% end %>
+
+<% if current_admin %> 
+
+<%= render "partials/topnav" %>
+
+<% else %>
+  
+  <%= render "emp_partials/topnav" %>
+
+
+<% end %>
+
+
+
+<!-- page content -->
+<div class="right_col" role="main">
+  <div class="">
+    <div class="page-title">
+      <div class="title_left">
+        <h5>Customer</h5>
+      </div>
+
+      <div class="title_right">
+        <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+          <div class="input-group">
+            
+                    
+                            
+                        
+          </div>
+        </div>
+      </div>
+         <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel" style="height:600px;">
+          <div class="x_title">
+
+          <h6> Create New Customer </h6>
+    </div>
+
+   
+
+   
+<div class="formcontrol">
+
+  <%= form_for(@customer) do |f| %>
+ 
+
+    
+    <%= f.text_field :name , :placeholder => "Customer Name" %>
+    <%= f.text_field :mobile , :placeholder => "Customer Mobile"%>
+    <%= f.email_field :email , :placeholder => "Customer Email" %>
+    <%= f.text_field :date_of_birth , class: "datepicker" , :placeholder => "Customer DOB" %>
+
+   
+    <%= f.button :submit , class: "btn-cust"%>
+  
+   </div>
+
+  <%end%>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /page content -->
+
+
+<%= render "partials/footer" %>
+  <%= javascript_include_tag 'footermanifest', 'data-turbolinks-track' => true %>

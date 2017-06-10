@@ -1,0 +1,16 @@
+<h1> Admin Signup </h1> 
+
+<div class ="form1">
+
+
+<%= form_for @admin do |f| %>
+    <%= f.text_field :email , :placeholder => "email" %>
+    <%= f.password_field :password  , :placeholder => "password" %>
+    <%= f.password_field :password_confirmation  , :placeholder => "Confirm Password" %>
+
+    </br>
+    </br>
+  <%= f.submit "admin signup" , class: "btn-submit" %>
+<% end %>
+
+</div>

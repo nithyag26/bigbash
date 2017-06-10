@@ -18,7 +18,8 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
+@import "datepicker";
+@import "print";
 @import "font-awesome";
 
 @import "css/animate.min";
@@ -29,3 +30,234 @@
 @import "css/ion.rangeSlider";
 @import "css/ion.rangeSlider.skinFlat";
 @import "pace";
+
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css?family=Marcellus+SC|Pirata+One');
+
+body.log {
+  
+    background-image: url('1.jpg'); 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+
+
+  
+}
+
+.btn-submit {
+  color: #FFFFFF;
+  font-size: 18px;
+  text-transform: uppercase;
+  background: #333333;
+  padding: 10px 20px;
+  border: 0;
+  margin-top: 6px;
+}
+
+
+
+.btn-admin {
+  color: #FFFFFF;
+  font-size: 18px;
+  text-transform: uppercase;
+  background: #333333;
+  padding: 10px 20px;
+  border: 0;
+  
+  
+  
+}
+
+.btn-search {
+  
+  color: #FFFFFF;
+  font-size: 18px;
+  text-transform: uppercase;
+  background: #333333;
+  padding: 10px 20px;
+  border: 0;
+
+}
+
+.btn-cust{
+  
+  color: #FFFFFF;
+  font-size: 18px;
+  text-transform: uppercase;
+  background: #333333;
+  padding: 10px 15px;
+  margin-right :3cm;
+
+  margin-top :1cm;
+  border: 0;
+  
+
+}
+
+.btn-emp{
+  
+  color: #FFFFFF;
+  font-size: 18px;
+  text-transform: uppercase;
+  background: #333333;
+  padding: 10px 15px;
+  margin-left: 1cm;
+  margin-top: 1cm;
+  border: 0;
+  
+
+}
+
+.btn-item{
+  
+  color: #FFFFFF;
+  font-size: 18px;
+  text-transform: uppercase;
+  background: #333333;
+  padding: 10px 15px;
+  margin-left: 0cm;
+  margin-top: 1cm;
+  border: 0;
+  
+
+}
+
+.btn-user {
+  color: #FFFFFF;
+  font-size: 18px;
+  text-transform: uppercase;
+  background: #333333;
+  padding: 10px 20px;
+  border: 0;
+  
+  
+ 
+}
+
+.btn-ser{
+  
+  color: #FFFFFF;
+  font-size: 18px;
+  text-transform: uppercase;
+  background: #333333;
+  padding: 10px 20px;
+  border: 0;
+
+}
+
+table.find {
+  
+  margin-left: 20cm;
+  margin-top: 10cm;
+
+ border-collapse: separate;
+    border-spacing: 50px 0px;
+
+
+} 
+
+
+  h1 {
+
+    font-size: 45px;
+    font-family: 'Lobster', cursive;
+    margin-left: 12cm;
+    margin-top: 2cm;
+      color: #fff;
+  }
+
+
+  h2 {
+
+    font-size: 45px;
+    font-family: 'Lobster', cursive;
+    margin-left: 19cm;
+    margin-top: 6cm;
+      color: #fff;
+  }
+
+  h5 {
+
+    font-size: 30px;
+    font-family: 'Marcellus SC', serif;
+
+
+  }
+
+  h6 {
+
+    font-size: 24px;
+    font-family: 'Marcellus SC', serif;
+
+
+  }
+
+  .formcontrol {
+  text-align:right;
+  margin: 0 auto 5px;
+  padding: 100px 0 10px 0;
+  font-size: 16px;
+  width: 300px;
+  height: 50px
+
+
+  }
+
+  .searchform{
+
+  margin-left: 4cm;
+  padding: 30px 0 7px 0;
+  font-size: 10px;
+  width: 600px;
+  height: 20px
+
+  }
+
+  table.ex{
+
+  border-collapse: separate;
+    border-spacing: 50px 0px;
+  }
+
+
+.form {
+  text-align:right;
+  margin: 0 auto 5px;
+  
+  margin-left: 18cm;
+  padding: 100px 0 10px 0;
+  font-size: 16px;
+  width: 300px;
+  height: 50px
+}
+
+.form1 {
+  text-align:right;
+  margin: 0 auto 5px;
+  
+  margin-left: 11cm;
+  padding: 100px 0 10px 0;
+  font-size: 16px;
+  width: 300px;
+  height: 50px
+
+
+}
+
+input[type=text],
+input[type=email],
+input[type=password] {
+ 
+
+  background-color: transparent;
+  font-size: 16px;
+  color: #a0a0a0;
+  width: 100%;
+  border: 1px solid #E6E6E6;
+  border-radius: 0px; 
+  height: 60px;
+  margin: 6px auto;
+  text-indent: 10px;
+}
